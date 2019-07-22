@@ -1,5 +1,8 @@
 {% extends 'authenticate\base.html' %}
 {% block content %}
-<h1>Bitch</h1>
-
+    {% if user.is_authenticated %}
+        <p>Hello , {{ user.first_name }}</p>
+        <div> This is a test webpage ! Have fun with nothing ;) </div>
+        <!-- <p>Email : {{ user.email }}</p> -->
+    {% endif %}
 {% endblock %}
